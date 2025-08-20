@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpNetServer", "McpNetServer\McpNetServer.csproj", "{F340F48D-5279-4985-8539-5F94317D98B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleClientApp", "ExampleClientApp\ExampleClientApp.csproj", "{B9559BE1-DF26-4F77-BA67-28F26566CE31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F340F48D-5279-4985-8539-5F94317D98B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F340F48D-5279-4985-8539-5F94317D98B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F340F48D-5279-4985-8539-5F94317D98B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9559BE1-DF26-4F77-BA67-28F26566CE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9559BE1-DF26-4F77-BA67-28F26566CE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9559BE1-DF26-4F77-BA67-28F26566CE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9559BE1-DF26-4F77-BA67-28F26566CE31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
