@@ -120,6 +120,13 @@ Potential areas for expansion:
 - Real-time document monitoring and updates
 - Integration with external document sources
 
+## Inspecting
+Probably best way to inspect the behaviour is to use npx.
+https://github.com/modelcontextprotocol/inspector
+```bash
+npx @modelcontextprotocol/inspector
+```
+
 ## Contributing
 
 When extending this server:
