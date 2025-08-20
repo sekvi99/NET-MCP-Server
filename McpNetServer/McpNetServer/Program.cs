@@ -8,6 +8,7 @@ var builder = Host.CreateApplicationBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
+    .WriteTo.Console()
     .WriteTo.File(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "log.txt"))
     .CreateLogger();
 

@@ -13,8 +13,17 @@ public static class McpDetailsTool
     public static IEnumerable<DocumentDetails> GetDocumentDetails(
         List<string> keywords)
     {
-        // Path might need to be adjusted in other machines
-        var documentDetails = DocumentsLoader.LoadDocumentsWithDetails(@".\Documents");
-        return documentDetails.Select(d => d.Details);
+        try
+        {
+            // Path might need to be adjusted in other machines
+            var documentDetails = DocumentsLoader.LoadDocumentsWithDetails(@".\Documents")
+                .FilterByKeyword(keywords);
+            return documentDetails.Select(d => d.Item2);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return [];
+        }
     }
 }

@@ -9,11 +9,14 @@ public static class DocumentsLoaderExtensions
         return DocumentsLoader.LoadDocumentsWithDetails(path).Select(x => x.Details);
     }
 
-    public static IEnumerable<string> FilterByKeyword(this IEnumerable<(string Content, DocumentDetails Details)> documents, string keyword)
+    public static IEnumerable<(string, DocumentDetails)> FilterByKeyword(this IEnumerable<(string Content, DocumentDetails Details)> documents, List<string> keywords)
     {
+        if (keywords.Count == 0) 
+            return documents;
+        
         return documents
-            .Where(doc => doc.Details.Keywords.Any(k => k.Contains(keyword, StringComparison.OrdinalIgnoreCase)))
-            .Select(doc => doc.Content);
+            .Where(doc => doc.Details.Keywords.Any(k => 
+                keywords.Any(keyword => k.Contains(keyword, StringComparison.OrdinalIgnoreCase))));
     }
 
     public static IEnumerable<(string Content, DocumentDetails Details)> FilterByDateRange(
